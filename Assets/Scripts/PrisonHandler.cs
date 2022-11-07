@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using ViewControllTools;
 
-public class JokerHandler : MonoBehaviour
+public class PrisonHandler : MonoBehaviour
 {
     public Button
 
@@ -19,12 +19,13 @@ public class JokerHandler : MonoBehaviour
 
     private int currentStep = 0;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         panelController = FindObjectOfType<PanelController>();
 
         panelController.time = 900 / 8;
-        panelController.totalStep = 4;
+        panelController.minTemps = 8 * 60;
 
         var chronoHandler = FindObjectOfType<CountdownHandler>();
 
@@ -53,7 +54,8 @@ public class JokerHandler : MonoBehaviour
         }
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         if (panelController.step != currentStep)
         {
@@ -65,7 +67,7 @@ public class JokerHandler : MonoBehaviour
         }
     }
 
-    public void LoadJokerHintWithIndex(int hint)
+    public void LoadPrisonHintWithIndex(int hint)
     {
         switch (panelController.step)
         {
@@ -80,7 +82,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH1 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         0);
                                 }
                                 break;
@@ -92,7 +94,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH2 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         1);
                                 }
                                 break;
@@ -104,7 +106,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH3 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         2);
                                 }
                                 break;
@@ -123,7 +125,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH1 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         3);
                                 }
                                 break;
@@ -135,7 +137,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH2 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         4);
                                 }
                                 break;
@@ -147,7 +149,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH3 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         5);
                                 }
                                 break;
@@ -166,7 +168,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH1 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         6);
                                 }
                                 break;
@@ -178,7 +180,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH2 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         7);
                                 }
                                 break;
@@ -190,7 +192,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH3 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         8);
                                 }
                                 break;
@@ -209,7 +211,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH1 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         9);
                                 }
                                 break;
@@ -221,7 +223,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH2 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         10);
                                 }
                                 break;
@@ -233,7 +235,7 @@ public class JokerHandler : MonoBehaviour
                                     panelController.nH3 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
-                                            .jokerHintsPanels,
+                                            .prisonHintsPanels,
                                         11);
                                 }
                                 break;
@@ -244,8 +246,7 @@ public class JokerHandler : MonoBehaviour
         }
     }
 
-    public void LoadPinView()
-    {
-        ViewController.LoadViewWithIndex(panelController.jokerGamePanels, 2);
+    public void LoadPinPanel() {
+        ViewController.LoadViewWithIndex(panelController.prisonGamePanels, 2);
     }
 }

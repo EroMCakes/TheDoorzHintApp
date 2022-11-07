@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c49dc092cd5375438438f832f3460d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eff5f34d95fb7a24b8b286606ca33dd7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4958190566124054024}
-  - component: {fileID: 2848102658354056520}
+  - component: {fileID: 6629272694780086431}
   m_Layer: 5
   m_Name: panelController
   m_TagString: Untagged
@@ -115,7 +115,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2848102658354056520
+--- !u!114 &6629272694780086431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2621948978487234232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22050ac3214e0d04ba965f296bd39cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: a7f03ec612ae94e4ea0d8fa4007eae43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2852627738766777476
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4da62362ba44f824991275634a893c36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f097ea0df9b01b4eb904febb0728ec9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2848102658354056520}
+      - m_Target: {fileID: 6629272694780086431}
         m_TargetAssemblyTypeName: ViewControllTools.ViewController, Assembly-CSharp
         m_MethodName: DestroyHintPanel
         m_Mode: 1

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -149,59 +149,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 145009087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34ec1e33406f0254ba4685a45b70191d, type: 3}
+  m_Script: {fileID: 11500000, guid: 189f9083ab0b0a34c8f0861ad752d91a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainPanelsPrefabs:
-  - {fileID: 1614712918669949063, guid: 7d5b7a0ada937a74eb1d4810fc38d5d9, type: 3}
-  jokerHintsPanels:
-  - {fileID: 2277862762533303852, guid: c933a795b8aa71d449f04888a27d14e4, type: 3}
-  - {fileID: 8319868387075359448, guid: 9f5dc3fb6bee58447bb56a2d36954315, type: 3}
-  - {fileID: 2772184106926828214, guid: 838fa621403359a4a92050b0ead500ac, type: 3}
-  - {fileID: 939249460896360720, guid: c43473435ccb64449834182d27b6bd11, type: 3}
-  - {fileID: 5776470721287012947, guid: 3a619b16261f6574d9e0060d03fca920, type: 3}
-  - {fileID: 8975689964390755260, guid: c090d847c25d406438d415d14a2dad39, type: 3}
-  - {fileID: 5658509154226485497, guid: 3002381bd828cc348b72e4e24f8cfef8, type: 3}
-  - {fileID: 8060252113812446274, guid: 18afe16e705028649ac6a99f5870ec0a, type: 3}
-  - {fileID: 4185138711238742137, guid: b8c54e0c8be1cc041823c809d911a16f, type: 3}
-  - {fileID: 6005052171754473432, guid: 159ec0894d31327429266a0c8fd3354c, type: 3}
-  - {fileID: 8826001414850381282, guid: b31daf041a71f8249a09504fb2a7890e, type: 3}
-  - {fileID: 8132062696990508012, guid: b147d82421ed62e449de60a12285ec78, type: 3}
-  jokerGamePanels:
-  - {fileID: 2988423300611461124, guid: 631d762f0356ff84c860634bb00f5ad7, type: 3}
-  - {fileID: 5992032733905720209, guid: bae72888c4044c74fa5259f61b0f5998, type: 3}
-  - {fileID: 1614712918669949063, guid: 96cf2f97b87ce9c49ab14fc7b53a0eec, type: 3}
-  prisonGamePanels:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  prisonHintsPanels:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  unavailableHintSprites:
-  - {fileID: 21300000, guid: 4be02a35519eb3849bb7f874f6dacd92, type: 3}
-  - {fileID: 21300000, guid: ea9742672b80387409b6a0f03cb774a5, type: 3}
-  - {fileID: 21300000, guid: c582a88e2c1019440af5401f12a771df, type: 3}
-  availableHintSprites:
-  - {fileID: 21300000, guid: 82a71188496f36a448509dc3c82963c5, type: 3}
-  - {fileID: 21300000, guid: 1b334ccd536cc4b479fcf1f6fe5145f1, type: 3}
-  - {fileID: 21300000, guid: cc17c797ab727bf4993d0f205bbe6565, type: 3}
+  - {fileID: 1614712918669949063, guid: f5e19153015a453459b1678699108b29, type: 3}
+  - {fileID: 7374608650173918525, guid: d7d117ad85d8a0640ab1ab3d1ed4b446, type: 3}
+  jokerHintsPanels: []
+  jokerGamePanels: []
+  prisonGamePanels: []
+  prisonHintsPanels: []
+  unavailableHintSprites: []
+  availableHintSprites: []
   step: 0
   hint: 0
   time: 0
   challenge: 
-  totalStep: 0
+  totalStep: 1
   score: 0
   nH1: 0
   nH2: 0
@@ -255,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
