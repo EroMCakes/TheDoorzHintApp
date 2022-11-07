@@ -15,13 +15,19 @@ public class PanelController : MonoBehaviour
 
    public string challenge;
 
+   public int totalStep = 1;
+
+   public int score, nH1, nH2, nH3, minTemps;
+
    public float timeLeft;
+   public float totalTime;
 
    [SerializeField]
    public GameObject mainCanvas;
 
    private void Awake() {
-        ViewController.LoadViewWithIndex(mainPanelsPrefabs, 0);
+        ViewController.LoadViewWithIndex(jokerGamePanels, 0);
+        
    }
 
    public IEnumerator ShortHintAvailability() {

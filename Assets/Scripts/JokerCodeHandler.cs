@@ -20,7 +20,7 @@ public class JokerCodeHandler : MonoBehaviour
 
         switch (panelController.challenge) {
             case "joker": {
-                ViewController.LoadViewWithIndex(panelController.jokerGamePanels, 1);
+                ViewController.DestroyHintPanel();
                 break;
             }
         }
@@ -34,7 +34,7 @@ public class JokerCodeHandler : MonoBehaviour
                 StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 2;
                 panelController.hint = 0;
-                ViewController.LoadViewWithIndex(panelController.jokerGamePanels, 1);
+                ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
             }
@@ -45,7 +45,7 @@ public class JokerCodeHandler : MonoBehaviour
                 }
                 panelController.hint = 0;
                 panelController.step = 3;
-                ViewController.LoadViewWithIndex(panelController.jokerGamePanels, 1);
+                ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
             }
@@ -56,8 +56,19 @@ public class JokerCodeHandler : MonoBehaviour
                 }
                 panelController.hint = 0;
                 panelController.step = 4;
-                ViewController.LoadViewWithIndex(panelController.jokerGamePanels, 1);
+                ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
+                break;
+            }
+            case "666": {
+                panelController = FindObjectOfType<PanelController>();
+                panelController.step = 5;
+                var chrono = FindObjectOfType<CountdownHandler>();
+                StopAllCoroutines();
+                panelController.score = ((panelController.step - 1) / panelController.totalStep) * ((10 * (panelController.minTemps + (int)(panelController.timeLeft / 60))) - (panelController.nH1 * 3) - (panelController.nH2 * 6) - (panelController.nH3 * 9));
+                ViewController.DestroyHintPanel();
+                ViewController.DestroyCurrentViewPanel();
+                ViewController.LoadViewWithIndex(panelController.mainPanelsPrefabs, 1);
                 break;
             }
         }

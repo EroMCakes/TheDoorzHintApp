@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8391297116920761466}
+  - component: {fileID: 7888174010740576190}
   m_Layer: 5
   m_Name: GMPinContoller
   m_TagString: Untagged
@@ -36,6 +37,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7888174010740576190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125748791864050107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bdd00535b020c429efa05a9c0c9339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinField: {fileID: 4408509327205804520}
 --- !u!1 &1614712918669949063
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,13 +478,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1125748791864050107}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 7888174010740576190}
+        m_TargetAssemblyTypeName: GameMasterPinController, Assembly-CSharp
+        m_MethodName: ValidatePinField
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -564,29 +578,125 @@ PrefabInstance:
     m_TransformParent: {fileID: 1234318071417590983}
     m_Modifications:
     - target: {fileID: 1519973661880266363, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519973661880266363, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 1519973661880266363, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetPinField
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519973661880266363, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519973661880266363, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2210562674970224769, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_Name
       value: numberPad
       objectReference: {fileID: 0}
     - target: {fileID: 4033314167383724096, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033314167383724096, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 4033314167383724096, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033314167383724096, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033314167383724096, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033314167383724096, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402286785624355830, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4402286785624355830, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 4402286785624355830, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402286785624355830, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402286785624355830, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402286785624355830, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493994031389965541, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4493994031389965541, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 4493994031389965541, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493994031389965541, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493994031389965541, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493994031389965541, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230334804836226219, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5230334804836226219, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 5230334804836226219, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230334804836226219, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230334804836226219, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230334804836226219, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6068921582361141497, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -672,29 +782,145 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6843461220780715245, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843461220780715245, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 6843461220780715245, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843461220780715245, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843461220780715245, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6843461220780715245, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175725118584037665, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7175725118584037665, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 7175725118584037665, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175725118584037665, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175725118584037665, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175725118584037665, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765753447273520001, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7765753447273520001, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 7765753447273520001, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765753447273520001, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765753447273520001, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765753447273520001, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147000865463960040, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8147000865463960040, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 8147000865463960040, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147000865463960040, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8147000865463960040, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888961969629189708, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8888961969629189708, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 8888961969629189708, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888961969629189708, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888961969629189708, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888961969629189708, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186905394709819580, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9186905394709819580, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1125748791864050107}
+      objectReference: {fileID: 7888174010740576190}
+    - target: {fileID: 9186905394709819580, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: enterDigit
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186905394709819580, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameMasterPinController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186905394709819580, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186905394709819580, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b7436d4d9adb343b00195adc774297, type: 3}
 --- !u!224 &2085260861185088858 stripped

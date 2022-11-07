@@ -23,11 +23,10 @@ public class JokerHandler : MonoBehaviour
     {
         panelController = FindObjectOfType<PanelController>();
 
-        panelController.time = 15 / 5;
+        panelController.time = 900 / 8;
 
         var chronoHandler = FindObjectOfType<CountdownHandler>();
-        chronoHandler.startTime = 900f;
-        
+
         stepInfo.text = "Etape: " + panelController.step + "/4";
 
         if (panelController.hint == 1)
@@ -65,17 +64,9 @@ public class JokerHandler : MonoBehaviour
         }
     }
 
-    public void LoadJokerViewWithIndex(int viewIndex) =>
-        ViewController
-            .LoadViewWithIndex(panelController.jokerGamePanels, viewIndex);
+    
 
-    public void StartGame()
-    {
-        panelController.step = 1;
-
-        LoadJokerViewWithIndex(1);
-        // StartCoroutine(panelController.ShortHintAvailability());
-    }
+    
 
     public void LoadJokerHintWithIndex(int hint)
     {
@@ -88,7 +79,8 @@ public class JokerHandler : MonoBehaviour
                         case 1:
                             {
                                 if (panelController.hint > 0)
-                                {
+                                {   
+                                    panelController.nH1 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -99,7 +91,8 @@ public class JokerHandler : MonoBehaviour
                         case 2:
                             {
                                 if (panelController.hint > 1)
-                                {
+                                {   
+                                    panelController.nH2 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -111,6 +104,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
+                                    panelController.nH3 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -129,6 +123,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
+                                    panelController.nH1 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -140,6 +135,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
+                                    panelController.nH2 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -151,6 +147,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
+                                    panelController.nH3 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -169,6 +166,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
+                                    panelController.nH1 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -180,6 +178,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
+                                    panelController.nH2 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -191,6 +190,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
+                                    panelController.nH3 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -209,6 +209,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
+                                    panelController.nH1 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -220,6 +221,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
+                                    panelController.nH2 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -231,6 +233,7 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
+                                    panelController.nH3 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
@@ -243,7 +246,8 @@ public class JokerHandler : MonoBehaviour
                 }
         }
     }
-
-    public void BackToChallengeChoice() =>
-        ViewController.LoadViewWithIndex(panelController.mainPanelsPrefabs, 1);
+public void LoadPinView() {
+    ViewController.LoadViewWithIndex(panelController.jokerGamePanels, 2);
+}
+    
 }
