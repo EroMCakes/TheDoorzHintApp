@@ -22,6 +22,10 @@ public class PanelController : MonoBehaviour
    public float timeLeft;
    public float totalTime;
 
+   public bool isTaken1 = false;
+   public bool isTaken2 = false;
+   public bool isTaken3 = false;
+
    [SerializeField]
    public GameObject mainCanvas;
 

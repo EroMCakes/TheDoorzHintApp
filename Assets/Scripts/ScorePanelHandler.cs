@@ -26,6 +26,9 @@ public class ScorePanelHandler : MonoBehaviour
         panelController.totalStep = 1;
         panelController.totalTime = 0;
         panelController.challenge = "";
+        panelController.isTaken1 = false;
+        panelController.isTaken2 = false;
+        panelController.isTaken3 = false;
         ViewController.DestroyCurrentViewPanel();
         ViewController.LoadViewWithIndex(panelController.jokerGamePanels,0);
     }

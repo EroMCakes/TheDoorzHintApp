@@ -24,7 +24,7 @@ public class CountdownHandler : MonoBehaviour
             panelController.timeLeft = timer;
             // timerText.text = (int)(timer / 60) + ":" + (int)(timer % 60);
             FormatText();
-            Debug.Log (timer);
+            // Debug.Log (timer);
             yield return null;
         }
         if (timer == 0)

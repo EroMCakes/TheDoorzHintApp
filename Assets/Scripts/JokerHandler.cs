@@ -24,6 +24,8 @@ public class JokerHandler : MonoBehaviour
         panelController = FindObjectOfType<PanelController>();
 
         panelController.time = 900 / 8;
+        // panelController.hint = 1;
+        panelController.minTemps = 8 * 60;
         panelController.totalStep = 4;
 
         var chronoHandler = FindObjectOfType<CountdownHandler>();
@@ -58,9 +60,38 @@ public class JokerHandler : MonoBehaviour
         if (panelController.step != currentStep)
         {
             currentStep = panelController.step;
+            stepInfo.text = "Etape: " + panelController.step + "/4";
             if (panelController.hint == 0)
             {
                 StartCoroutine(panelController.ShortHintAvailability());
+                hintButton2.image.sprite = panelController.unavailableHintSprites[1];
+                hintButton3.image.sprite = panelController.unavailableHintSprites[2];
+            }
+        }
+    }
+
+    public void HintCheck(int hintIndex) {
+        switch (hintIndex) {
+            case 1: {
+                if (!panelController.isTaken1) {
+                        panelController.nH1++;
+                        panelController.isTaken1 = true;
+                }
+                break;
+            }
+            case 2: {
+                if (!panelController.isTaken2) {
+                    panelController.nH2++;
+                    panelController.isTaken2 = true;
+                }
+                break;
+            }
+            case 3: {
+                if (!panelController.isTaken3) {
+                    panelController.nH3++;
+                    panelController.isTaken3 = true;
+                }
+                break;
             }
         }
     }
@@ -77,11 +108,12 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 1;
+                                    
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         0);
+                                    HintCheck(1);
                                 }
                                 break;
                             }
@@ -89,11 +121,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         1);
+                                    HintCheck(2);
                                 }
                                 break;
                             }
@@ -101,11 +133,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 1;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         2);
+                                    HintCheck(3);
                                 }
                                 break;
                             }
@@ -120,11 +152,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         3);
+                                    HintCheck(1);
                                 }
                                 break;
                             }
@@ -132,11 +164,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         4);
+                                    HintCheck(2);
                                 }
                                 break;
                             }
@@ -144,11 +176,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 2;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         5);
+                                    HintCheck(3);
                                 }
                                 break;
                             }
@@ -163,11 +195,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         6);
+                                    HintCheck(1);
                                 }
                                 break;
                             }
@@ -175,11 +207,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         7);
+                                    HintCheck(2);
                                 }
                                 break;
                             }
@@ -187,11 +219,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 3;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         8);
+                                    HintCheck(3);
                                 }
                                 break;
                             }
@@ -206,11 +238,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         9);
+                                    HintCheck(1);
                                 }
                                 break;
                             }
@@ -218,11 +250,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         10);
+                                    HintCheck(2);
                                 }
                                 break;
                             }
@@ -230,11 +262,11 @@ public class JokerHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 4;
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .jokerHintsPanels,
                                         11);
+                                    HintCheck(3);
                                 }
                                 break;
                             }
