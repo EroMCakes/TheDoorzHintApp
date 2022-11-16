@@ -15,17 +15,12 @@ public class JokerCodeHandler : MonoBehaviour
         codeField.text += enteredNumber.ToString();
     }
     
-    public void PreviousView() {
-        var panelController = FindObjectOfType<PanelController>();
-
-        switch (panelController.challenge) {
-            case "joker": {
-                ViewController.DestroyHintPanel();
-                break;
-            }
-        }
-    }
+    public void PreviousView() => ViewController.DestroyHintPanel();
     public void ResetCodeField() => codeField.text = "";
+
+    private void Start() {
+        panelController = FindObjectOfType<PanelController>();
+    }
 
     public void ValidateCodeField() {
         switch (codeField.text) {

@@ -61,7 +61,7 @@ namespace ViewControllTools
                         panelController.hint = 0;
                         panelController.step = 0;
                         DestroyCurrentViewPanel();
-                        LoadViewWithIndex(panelController.jokerGamePanels, 0);
+                        LoadViewWithIndex(panelController.prisonGamePanels, 0);
                         break;
                     }
                 case "prison":
@@ -83,19 +83,17 @@ namespace ViewControllTools
         public void StartGame()
         {
             panelController.step = 1;
-            switch(panelController.challenge) {
-                case "joker": {
-                    panelController.totalStep = 4;
-                    panelController.minTemps = 8;
-                    break;
-                }
-            }
-
-            ViewController.LoadJokerViewWithIndex(1);
+            
+            ViewController.LoadViewWithIndex(panelController.gamePanels, 1);
             // var chrono = FindObjectOfType<CountdownHandler>();
             // StartCoroutine(chrono.Countdown());
             ViewController.DestroyCurrentViewPanel();
             // StartCoroutine(panelController.ShortHintAvailability());
+        }
+
+        public void PreviousToPIn() {
+            ViewController.DestroyCurrentViewPanel();
+            ViewController.LoadViewWithIndex(panelController.mainPanelsPrefabs, 0);
         }
 
         public void BackToChallengeChoice()

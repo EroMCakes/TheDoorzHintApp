@@ -63,8 +63,11 @@ public class PrisonHandler : MonoBehaviour
             if (panelController.hint == 0)
             {
                 StartCoroutine(panelController.ShortHintAvailability());
+                stepInfo.text = "Etape " + panelController.step.ToString() + "/4";
             }
         }
+
+
     }
 
     public void LoadPrisonHintWithIndex(int hint)

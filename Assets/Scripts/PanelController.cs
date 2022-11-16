@@ -7,7 +7,7 @@ using ViewControllTools;
 public class PanelController : MonoBehaviour
 {
    [SerializeField]
-   public GameObject[] mainPanelsPrefabs, jokerHintsPanels, jokerGamePanels, prisonGamePanels, prisonHintsPanels;
+   public GameObject[] mainPanelsPrefabs, jokerHintsPanels, jokerGamePanels, prisonGamePanels, prisonHintsPanels, gamePanels, hintPanels;
 
    public Sprite[] unavailableHintSprites, availableHintSprites;
 
@@ -26,7 +26,7 @@ public class PanelController : MonoBehaviour
    public GameObject mainCanvas;
 
    private void Awake() {
-        ViewController.LoadViewWithIndex(jokerGamePanels, 0);
+        ViewController.LoadViewWithIndex(mainPanelsPrefabs, 0);
         
    }
 

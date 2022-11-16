@@ -24,7 +24,7 @@ public class GameMasterPinController : MonoBehaviour
             panelController.hint = 0;
             panelController.step = 0;
             ViewController.DestroyCurrentViewPanel();
-            ViewController.LoadJokerViewWithIndex(0);
+            ViewController.LoadViewWithIndex(panelController.gamePanels,0);
         }
     }
     // Start is called before the first frame update

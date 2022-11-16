@@ -89,8 +89,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8032549462445675101}
-  - component: {fileID: 6994201454412569890}
   - component: {fileID: 4776335352542836909}
+  - component: {fileID: 5937296400611077630}
   m_Layer: 0
   m_Name: panelController
   m_TagString: Untagged
@@ -111,20 +111,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8994156887167130509}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6994201454412569890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033668207253151263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d39b9b3a97334d40957c92377b63334, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4776335352542836909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,9 +122,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033668207253151263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7f03ec612ae94e4ea0d8fa4007eae43, type: 3}
+  m_Script: {fileID: 11500000, guid: 694490dc76169e9479e466250cfe9ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintButton1: {fileID: 1766810945042714130}
+  hintButton2: {fileID: 4689045412888790414}
+  hintButton3: {fileID: 2803159797671359432}
+  stepInfo: {fileID: 2837338549954260124}
+--- !u!114 &5937296400611077630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033668207253151263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0f951f2f8490b4c9bb0aa3b9ba71e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTime: 900
+  timerText: {fileID: 5346743136382855312}
 --- !u!1 &1143002964440125274
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad09240184eedd843b551189a080627c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4be02a35519eb3849bb7f874f6dacd92, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -258,9 +264,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6994201454412569890}
-        m_TargetAssemblyTypeName: JokerHandler, Assembly-CSharp
-        m_MethodName: LoadJokerHintWithIndex
+      - m_Target: {fileID: 4776335352542836909}
+        m_TargetAssemblyTypeName: PrisonHandler, Assembly-CSharp
+        m_MethodName: LoadPrisonHintWithIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -337,7 +343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f800e879c342947479813b2deee5485e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c582a88e2c1019440af5401f12a771df, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -391,9 +397,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6994201454412569890}
-        m_TargetAssemblyTypeName: JokerHandler, Assembly-CSharp
-        m_MethodName: LoadJokerHintWithIndex
+      - m_Target: {fileID: 4776335352542836909}
+        m_TargetAssemblyTypeName: PrisonHandler, Assembly-CSharp
+        m_MethodName: LoadPrisonHintWithIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -434,7 +440,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8994156887167130509}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -469,7 +475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d1948ae0ce2ed744ea6ccbe4c7c35074, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a41d78cd1ca9a842a6c3c68d9f04630, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -546,7 +552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb2bad52da2d0394cad46bf8f4b5be03, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea9742672b80387409b6a0f03cb774a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -600,9 +606,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6994201454412569890}
-        m_TargetAssemblyTypeName: JokerHandler, Assembly-CSharp
-        m_MethodName: LoadJokerHintWithIndex
+      - m_Target: {fileID: 4776335352542836909}
+        m_TargetAssemblyTypeName: PrisonHandler, Assembly-CSharp
+        m_MethodName: LoadPrisonHintWithIndex
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -648,8 +654,8 @@ RectTransform:
   - {fileID: 1673398826754994904}
   - {fileID: 7203893866408731718}
   - {fileID: 2510368546391453490}
-  - {fileID: 8032549462445675101}
   - {fileID: 7139414210044790706}
+  - {fileID: 8032549462445675101}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -686,7 +692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 44c8e6a3d5b47dc43880fc4c90edc421, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3480c3d8e976a6d4d8ee2ae1dce9cf3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -843,7 +849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1fbab3ad797b3554497b5827415bed06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9187718270450f49bfc31a6708be0ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -897,9 +903,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6994201454412569890}
-        m_TargetAssemblyTypeName: JokerHandler, Assembly-CSharp
-        m_MethodName: LoadPinView
+      - m_Target: {fileID: 4776335352542836909}
+        m_TargetAssemblyTypeName: PrisonHandler, Assembly-CSharp
+        m_MethodName: LoadPinPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
