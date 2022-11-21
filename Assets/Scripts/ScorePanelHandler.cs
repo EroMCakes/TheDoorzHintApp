@@ -30,6 +30,6 @@ public class ScorePanelHandler : MonoBehaviour
         panelController.isTaken2 = false;
         panelController.isTaken3 = false;
         ViewController.DestroyCurrentViewPanel();
-        ViewController.LoadViewWithIndex(panelController.jokerGamePanels,0);
+        ViewController.LoadViewWithIndex(panelController.gamePanels,0);
     }
 }

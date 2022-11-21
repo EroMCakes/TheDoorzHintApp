@@ -60,11 +60,36 @@ public class PiratesHandler : MonoBehaviour
         if (panelController.step != currentStep)
         {
             currentStep = panelController.step;
-            stepInfo.text = "Etape " + panelController.step.ToString() + "/8";
+            stepInfo.text = "Etape " + panelController.step.ToString() + panelController.totalStep.ToString();
             if (panelController.hint == 0)
             {
                 StartCoroutine(panelController.ShortHintAvailability());
-                stepInfo.text = "Etape " + panelController.step.ToString() + "/8";
+            }
+        }
+    }
+
+    public void HintCheck(int hintIndex) {
+        switch (hintIndex) {
+            case 1: {
+                if (!panelController.isTaken1) {
+                        panelController.nH1++;
+                        panelController.isTaken1 = true;
+                }
+                break;
+            }
+            case 2: {
+                if (!panelController.isTaken2) {
+                    panelController.nH2++;
+                    panelController.isTaken2 = true;
+                }
+                break;
+            }
+            case 3: {
+                if (!panelController.isTaken3) {
+                    panelController.nH3++;
+                    panelController.isTaken3 = true;
+                }
+                break;
             }
         }
     }
@@ -75,21 +100,21 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint>0) {
-                            panelController.nH1 = 1;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 0);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 1) {
-                            panelController.nH2 = 1;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 1);
                         }
                         break;
                     }
                     case 3: {
                         if(panelController.hint > 2) {
-                            panelController.nH3 = 1;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 2);
                         }
                         break;
@@ -101,21 +126,21 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH1 = 2;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 3);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 1) {
-                            panelController.nH2 = 2;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 4);
                         }
                         break;
                     }
                     case 3: {
                         if(panelController.hint > 2) {
-                            panelController.nH3 = 2;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 5);
                         }
                         break;
@@ -127,21 +152,21 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH1 = 3;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 6);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 1) {
-                            panelController.nH2 = 3;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 7);
                         }
                         break;
                     }
                     case 3: {
                         if(panelController.hint > 2) {
-                            panelController.nH3 = 3;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 8);
                         }
                         break;
@@ -153,21 +178,21 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH1 = 4;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 9);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 1) {
-                            panelController.nH2 = 4;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 10);
                         }
                         break;
                     }
                     case 3: {
                         if(panelController.hint > 1) {
-                            panelController.nH3 = 4;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 11);
                         }
                         break;
@@ -179,21 +204,21 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH1 = 5;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 12);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 1) {
-                            panelController.nH2 = 5;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 13);
                         }
                         break;
                     }
                     case 3: {
                         if(panelController.hint > 2) {
-                            panelController.nH3 = 5;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 14);
                         }
                         break;
@@ -205,21 +230,21 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH1 = 6;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 15);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH2 = 6;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 16);
                         }
                         break;
                     }
                     case 3: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH3 = 6;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 17);
                         }
                         break;
@@ -231,21 +256,21 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH1 = 7;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 18);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 1) {
-                            panelController.nH2 = 7;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 19);
                         }
                         break;
                     }
                     case 3: {
                         if(panelController.hint > 2) {
-                            panelController.nH3 = 7;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 20);
                         }
                         break;
@@ -257,14 +282,14 @@ public class PiratesHandler : MonoBehaviour
                 switch(hint) {
                     case 1: {
                         if(panelController.hint > 0 ) {
-                            panelController.nH1 = 8;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 21);
                         }
                         break;
                     }
                     case 2: {
                         if(panelController.hint > 1) {
-                            panelController.nH2 = 8;
+                            HintCheck(hint);
                             ViewController.LoadViewWithIndex(panelController.hintPanels, 22);
                         }
                         break;

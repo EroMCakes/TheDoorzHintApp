@@ -19,12 +19,23 @@ public class TemplierCodeHandler : MonoBehaviour
 
     public void PreviousView() => ViewController.DestroyHintPanel();
 
+    private void ResetHintButtons() {
+        GameObject.Find("toSecondHint").GetComponent<Button>().image.sprite = panelController.unavailableHintSprites[1];
+        GameObject.Find("toSecondHint").GetComponent<Button>().image.SetNativeSize();
+        GameObject.Find("toThirdHint").GetComponent<Button>().image.sprite = panelController.unavailableHintSprites[2];
+        GameObject.Find("toThirdHint").GetComponent<Button>().image.SetNativeSize();
+    }
+
     public void ValidateCodeField() {
         switch (codeField.text) {
             case "4052": {
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 2;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
@@ -33,6 +44,10 @@ public class TemplierCodeHandler : MonoBehaviour
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 3;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
@@ -41,6 +56,10 @@ public class TemplierCodeHandler : MonoBehaviour
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 4;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
@@ -49,6 +68,10 @@ public class TemplierCodeHandler : MonoBehaviour
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 5;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
@@ -57,6 +80,10 @@ public class TemplierCodeHandler : MonoBehaviour
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 6;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
@@ -65,6 +92,10 @@ public class TemplierCodeHandler : MonoBehaviour
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 7;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
@@ -73,6 +104,10 @@ public class TemplierCodeHandler : MonoBehaviour
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 8;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
@@ -81,12 +116,20 @@ public class TemplierCodeHandler : MonoBehaviour
                 if(panelController.hint != 3) StopCoroutine(panelController.ShortHintAvailability());
                 panelController.step = 9;
                 panelController.hint = 0;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 ViewController.DestroyHintPanel();
                 StartCoroutine(panelController.ShortHintAvailability());
                 break;
             }
             case "5207": {
                 panelController.step = 9;
+                panelController.isTaken1 = false;
+                panelController.isTaken2 = false;
+                panelController.isTaken3 = false;
+                ResetHintButtons();
                 StopAllCoroutines();
                 panelController.score = ((panelController.step - 1) / panelController.totalStep) * ((10 * (panelController.minTemps + (int)(panelController.timeLeft / 60))) - (panelController.nH1 * 3) - (panelController.nH2 * 6) - (panelController.nH3 * 9));
                 ViewController.DestroyHintPanel();

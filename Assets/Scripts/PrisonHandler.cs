@@ -60,14 +60,40 @@ public class PrisonHandler : MonoBehaviour
         if (panelController.step != currentStep)
         {
             currentStep = panelController.step;
+            stepInfo.text = "Etape" + panelController.step + "/4";
             if (panelController.hint == 0)
             {
                 StartCoroutine(panelController.ShortHintAvailability());
-                stepInfo.text = "Etape " + panelController.step.ToString() + "/4";
             }
         }
 
 
+    }
+
+    public void HintCheck(int hintIndex) {
+        switch (hintIndex) {
+            case 1: {
+                if (!panelController.isTaken1) {
+                        panelController.nH1++;
+                        panelController.isTaken1 = true;
+                }
+                break;
+            }
+            case 2: {
+                if (!panelController.isTaken2) {
+                    panelController.nH2++;
+                    panelController.isTaken2 = true;
+                }
+                break;
+            }
+            case 3: {
+                if (!panelController.isTaken3) {
+                    panelController.nH3++;
+                    panelController.isTaken3 = true;
+                }
+                break;
+            }
+        }
     }
 
     public void LoadPrisonHintWithIndex(int hint)
@@ -82,7 +108,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 1;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -94,7 +120,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 1;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -106,7 +132,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 1;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -125,7 +151,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 2;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -137,7 +163,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 2;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -149,7 +175,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 2;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -168,7 +194,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 3;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -180,7 +206,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 3;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -192,7 +218,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 3;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -211,7 +237,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 0)
                                 {
-                                    panelController.nH1 = 4;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -223,7 +249,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 1)
                                 {
-                                    panelController.nH2 = 4;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,
@@ -235,7 +261,7 @@ public class PrisonHandler : MonoBehaviour
                             {
                                 if (panelController.hint > 2)
                                 {
-                                    panelController.nH3 = 4;
+                                    HintCheck(hint);
                                     ViewController
                                         .LoadViewWithIndex(panelController
                                             .prisonHintsPanels,

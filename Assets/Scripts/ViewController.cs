@@ -84,7 +84,7 @@ namespace ViewControllTools
         {
             panelController.step = 1;
             
-            ViewController.LoadViewWithIndex(panelController.jokerGamePanels, 1);
+            ViewController.LoadViewWithIndex(panelController.gamePanels, 1);
             // var chrono = FindObjectOfType<CountdownHandler>();
             // StartCoroutine(chrono.Countdown());
             ViewController.DestroyCurrentViewPanel();

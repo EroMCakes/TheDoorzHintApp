@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -149,41 +149,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 145009087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 189f9083ab0b0a34c8f0861ad752d91a, type: 3}
+  m_Script: {fileID: 11500000, guid: 34ec1e33406f0254ba4685a45b70191d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainPanelsPrefabs:
-  - {fileID: 1614712918669949063, guid: f5e19153015a453459b1678699108b29, type: 3}
-  - {fileID: 7374608650173918525, guid: d7d117ad85d8a0640ab1ab3d1ed4b446, type: 3}
-  jokerHintsPanels:
-  - {fileID: 2277862762533303852, guid: 2c97ff4d73cebf84cb3ac2709565f845, type: 3}
-  - {fileID: 8319868387075359448, guid: c08f5b97ffcfe374498552ba1043c5d5, type: 3}
-  - {fileID: 2772184106926828214, guid: c881c052d03a4694c9d97e22f3bfaa3e, type: 3}
-  - {fileID: 939249460896360720, guid: 513e3a111e9fe7d4d8d9b5bdedcc00cd, type: 3}
-  - {fileID: 5776470721287012947, guid: 0ae2945c322e2b0499f96d79a1e2d456, type: 3}
-  - {fileID: 8975689964390755260, guid: d44d2ef4e1358bb48b44c53b919ccc15, type: 3}
-  - {fileID: 5658509154226485497, guid: b15647936e4e3ed49b47d2b9411e8fa8, type: 3}
-  - {fileID: 8060252113812446274, guid: 4ce1a9d8987cf3442be4d5ae04a45573, type: 3}
-  - {fileID: 4185138711238742137, guid: 0afd908a5541ffa438c329b898cd327f, type: 3}
-  - {fileID: 6005052171754473432, guid: e53b2a1ce94e6584f8cddaec0940fb5e, type: 3}
-  - {fileID: 8826001414850381282, guid: 4feb96c66f3930b43a0f6739f54578a5, type: 3}
-  - {fileID: 8132062696990508012, guid: 4fd84e1255e1ab2418bf35d831ad2a8a, type: 3}
-  jokerGamePanels:
-  - {fileID: 2988423300611461124, guid: 8072bf260632b934ab084af4dece63d7, type: 3}
-  - {fileID: 5992032733905720209, guid: 78b9f53b81f5c5f47b2617beb9bb715f, type: 3}
-  - {fileID: 1614712918669949063, guid: 6134c1719c2462b409d155b5c362062c, type: 3}
+  - {fileID: 1614712918669949063, guid: 7d5b7a0ada937a74eb1d4810fc38d5d9, type: 3}
+  - {fileID: 7374608650173918525, guid: d5e3b1616c343fd4badcbc9b855c604e, type: 3}
+  jokerHintsPanels: []
+  jokerGamePanels: []
   prisonGamePanels: []
   prisonHintsPanels: []
-  gamePanels: []
-  hintPanels: []
+  gamePanels:
+  - {fileID: 2988423300611461124, guid: 6f398079099209e41b015b33aaac6eb6, type: 3}
+  - {fileID: 5992032733905720209, guid: 2140fc5aca389a446940c82b749ddb6b, type: 3}
+  - {fileID: 1614712918669949063, guid: 06cf476fc030a1845ae5d8d2443248e2, type: 3}
+  hintPanels:
+  - {fileID: 3957046644228493635, guid: 3fa357336ce872e4fb208115eab83aad, type: 3}
+  - {fileID: 3957046644228493635, guid: 11c3e28735b8f7946bb59ed5daef7096, type: 3}
+  - {fileID: 3957046644228493635, guid: 1d4ba480a307af945b4f0968ff6092b7, type: 3}
+  - {fileID: 3957046644228493635, guid: 105edea51747e0e46b4ce4f34d189900, type: 3}
+  - {fileID: 3957046644228493635, guid: 28b70c95482baf242bc37a6795a06ad7, type: 3}
+  - {fileID: 3957046644228493635, guid: bd2ef7369f2ac0545aa71b6cda716d2d, type: 3}
+  - {fileID: 3957046644228493635, guid: e9c49fe3b5dfefd48be6c3fd6e409092, type: 3}
+  - {fileID: 3957046644228493635, guid: 1bb45cc1e0126dd44ba1f486eda823d3, type: 3}
+  - {fileID: 3957046644228493635, guid: 0bd5fe7012d2d454294c8140d383cef5, type: 3}
+  - {fileID: 3957046644228493635, guid: 855d62ee41672604783ecf4bc2c9fb82, type: 3}
+  - {fileID: 3957046644228493635, guid: 60cbd5c8c43cc60489dacc3afb6aba73, type: 3}
+  - {fileID: 3957046644228493635, guid: 943082826147af446876c4b2ddfc8ed3, type: 3}
+  - {fileID: 3957046644228493635, guid: 84d5e94cc712af6408dc08e0888e3f1b, type: 3}
+  - {fileID: 3957046644228493635, guid: bfba9b21cdf162744ab20c862138ebe5, type: 3}
+  - {fileID: 3957046644228493635, guid: d8380a7f10c633e4383c488628884adb, type: 3}
+  - {fileID: 3957046644228493635, guid: 168e5314ede53de49ba18d05b9c1934a, type: 3}
+  - {fileID: 3957046644228493635, guid: 168e5314ede53de49ba18d05b9c1934a, type: 3}
+  - {fileID: 3957046644228493635, guid: 168e5314ede53de49ba18d05b9c1934a, type: 3}
+  - {fileID: 3957046644228493635, guid: 6aca1ac3b527b5f4785c387a4b763220, type: 3}
+  - {fileID: 3957046644228493635, guid: 943aa681d4ea40c47abbfcde172da287, type: 3}
+  - {fileID: 3957046644228493635, guid: 49a52b19e7db20f4fad92a3f746dc649, type: 3}
+  - {fileID: 3957046644228493635, guid: 2eb25d44a02438a45932c0e0cc8578f3, type: 3}
+  - {fileID: 3957046644228493635, guid: a4ebc3873870cf14da637b839e647c7a, type: 3}
+  - {fileID: 3957046644228493635, guid: 5006a75e5dfa3a84facfa0b17a749bc3, type: 3}
+  - {fileID: 3957046644228493635, guid: 03ad93e01a96ab340bb381f402d56d64, type: 3}
+  - {fileID: 3957046644228493635, guid: 03ad93e01a96ab340bb381f402d56d64, type: 3}
+  - {fileID: 3957046644228493635, guid: 03ad93e01a96ab340bb381f402d56d64, type: 3}
+  - {fileID: 3957046644228493635, guid: 391ad209fd38ad742ab701157e8a04e9, type: 3}
+  - {fileID: 3957046644228493635, guid: f21fa63bda84db44292797bed64c99d6, type: 3}
+  - {fileID: 3957046644228493635, guid: cff3908658e5880478deebba58f86ca4, type: 3}
   unavailableHintSprites:
-  - {fileID: 21300000, guid: ad09240184eedd843b551189a080627c, type: 3}
-  - {fileID: 21300000, guid: cb2bad52da2d0394cad46bf8f4b5be03, type: 3}
-  - {fileID: 21300000, guid: f800e879c342947479813b2deee5485e, type: 3}
+  - {fileID: 21300000, guid: 4be02a35519eb3849bb7f874f6dacd92, type: 3}
+  - {fileID: 21300000, guid: ea9742672b80387409b6a0f03cb774a5, type: 3}
+  - {fileID: 21300000, guid: c582a88e2c1019440af5401f12a771df, type: 3}
   availableHintSprites:
-  - {fileID: 21300000, guid: 67b7afc4d0166334c9457079fbe1e85a, type: 3}
-  - {fileID: 21300000, guid: a721f818d90e78b4a8d6dc85d9f2df8a, type: 3}
-  - {fileID: 21300000, guid: e1932e2f6b643b946b76f10d0f339f32, type: 3}
+  - {fileID: 21300000, guid: 82a71188496f36a448509dc3c82963c5, type: 3}
+  - {fileID: 21300000, guid: 1b334ccd536cc4b479fcf1f6fe5145f1, type: 3}
+  - {fileID: 21300000, guid: cc17c797ab727bf4993d0f205bbe6565, type: 3}
   step: 0
   hint: 0
   time: 0
